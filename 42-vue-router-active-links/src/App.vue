@@ -1,6 +1,6 @@
 <template>
 <div id="app">
-	<h1>Vue Cli y Vue Router</h1>
+	<h1>Vue Router - Active links</h1>
 	<router-link to="/" exact active-class="activo" tag="li">
 		<a>Portada</a>
 	</router-link>
