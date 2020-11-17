@@ -1,11 +1,14 @@
 <template>
 <div id="app">
-	<h1>Vue Router - Programmatic nav</h1>
+	<h1>Vue Router - Nested routes</h1>
 	<router-link to="/" exact active-class="activo" tag="li">
 		<a>Home</a>
 	</router-link>
-	<router-link to="/contacto" active-class="activo" tag="li" >
-		<a>Contacto</a>
+	<router-link to="/equipo" active-class="activo" tag="li" >
+		<a>Equipo</a>
+	</router-link>
+	<router-link to="/equipo/jon" active-class="activo" tag="li" >
+		<a>Equipo Jon Snow</a>
 	</router-link>
 	<hr>
 	<router-view></router-view>
