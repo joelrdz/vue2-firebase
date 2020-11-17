@@ -11,17 +11,11 @@ export const routes = [
 		children: [
 			{ path: '',
 				name: 'equipo',
-				component: Usuario,
-				children: [
-					{ path: 'bio',
-						name: 'bio',
-						component: UsuarioBio
-					},
-					{ path: 'fotos',
-						name: 'fotos',
-						component: UsuarioFotos
-					}
-				]
+				components: {
+					default: Usuario,
+					bio: UsuarioBio,
+					fotos: UsuarioFotos
+				}
 			}
 		]
 	}
