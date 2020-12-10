@@ -1,6 +1,6 @@
 <template>
 <div id="app">
-	<h1>Vue Router - Named views</h1>
+	<h1>Vue Router - Redirect and Alias</h1>
 	<hr>
 	<router-view></router-view>
 </div>
