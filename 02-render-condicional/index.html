@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<title>Vue.js - Directivas incluidas</title>
+	<meta name="description" content="">
+</head>
+<body>
+<main>
+	<h1 v-show="connected">Connected!</h1>
+
+	<h2 v-if="age < 18">No puedes entrar</h2>
+	<h2 v-else-if="age > 1000">Eres un dios</h2>
+	<h2 v-else-if="age > 200">Eres un inmortal</h2>
+	<h2 v-else>Puedes entrar</h2>
+
+	<template v-if="connected">
+		<ul>
+			<h3>Welcome Jon</h3>
+			<li>
+				<a href="#">Profile</a>
+				<a href="#">Messages</a>
+				<a href="#">Log Out</a>
+			</li>
+		</ul>
+	</template>
+	<h4 v-else>No estás conectado :/</h4>
+
+	<pre>{{ $data }}</pre>
+</main>
+
+<!-- vue development version, includes helpful console warnings -->
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
