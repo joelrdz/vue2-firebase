@@ -1,7 +1,7 @@
 const vm = new Vue({
-	el: 'main',
-	data: {
-		connected: true,
-		age: 27
-	}
+  el: 'main',
+  data: {
+    connected: true,
+    age: 27
+  }
 });

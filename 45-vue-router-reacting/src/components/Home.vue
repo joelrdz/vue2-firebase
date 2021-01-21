@@ -1,3 +1,3 @@
 <template>
-	<h2>Portada</h2>
+  <h2>Portada</h2>
 </template>

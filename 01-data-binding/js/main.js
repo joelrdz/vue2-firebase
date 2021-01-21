@@ -4,8 +4,8 @@
 // input.addEventListener('keyup', () => h1.innerHTML = input.value);
 
 new Vue({
-	el: 'main',
-	data: {
-		message: 'Hello world!'
-	}
+  el: 'main',
+  data: {
+    message: 'Hello world!'
+  }
 });

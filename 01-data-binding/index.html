@@ -1,21 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="x-ua-compatible" content="ie=edge">
-	<title>Vue.js</title>
-	<meta name="description" content="">
-</head>
-<body>
-<main>
-	<h1>{{ message }}</h1>
-	<input type="text" v-model="message">
-	<pre>{{ $data }}</pre>
-</main>
 
-<!-- vue development version, includes helpful console warnings -->
-<script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
-<script src="js/main.js"></script>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Vue.js - Data binding y reactividad</title>
+  <meta name="description" content="">
+</head>
+
+<body>
+  <main>
+    <h1>{{ message }}</h1>
+    <input type="text" v-model="message">
+    <pre>{{ $data }}</pre>
+  </main>
+
+  <!-- vue development version, includes helpful console warnings -->
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+  <script src="js/main.js"></script>
 </body>
+
 </html>
