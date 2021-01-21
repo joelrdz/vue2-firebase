@@ -5,25 +5,21 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>Vue.js - Eventos</title>
+  <title>Vue.js - Directivas para render de listas</title>
   <meta name="description" content="">
 </head>
 
 <body>
   <main>
     <ul>
-      <li v-for="todo in todos">{{ todo }}</li>
+      <li v-for="todo in todosByAntiqueness">
+        {{ todo.title }}
+      </li>
     </ul>
-
-    <!-- Con Vue.js -->
     <form v-on:submit.prevent="addTodo">
       <input type="text" placeholder="To do..." v-model="newTodo">
       <input type="submit" value="Add">
     </form>
-
-    <!-- Con Vanilla JS -->
-    <!-- <input type="text" placeholder="To do..."> -->
-    <!-- <input type="button" value="Add" onclick="addTodo()"> -->
 
     <pre>{{ $data }}</pre>
   </main>

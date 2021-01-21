@@ -10,6 +10,7 @@ const vm = new Vue({
   },
   methods: {
     addTodo() {
+      // this, hace referencia a la instancia Vue
       this.todos.unshift(this.newTodo);
       this.newTodo = '';
     }
