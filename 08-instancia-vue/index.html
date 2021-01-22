@@ -5,22 +5,20 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>Vue.js - Filtros</title>
+  <title>Vue.js - La Instancia Vue</title>
   <meta name="description" content="">
 </head>
 
 <body>
   <main>
-    <input type="search" v-model="search">
-    <ul>
-      <li v-for="game in searchGame">
-        {{ game.title }}
-      </li>
-    </ul>
-    <input type="range" min="0" max="10" v-model="minScore">
-
+    <h1 v-text="message"></h1>
+    <button @click="backwards">Backwardss</button>
     <pre>{{ $data }}</pre>
   </main>
+  <div id="app">
+    <h1>{{ message }}</h1>
+    <pre>{{ $data }}</pre>
+  </div>
 
   <!-- vue development version, includes helpful console warnings -->
   <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
