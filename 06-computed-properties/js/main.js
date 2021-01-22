@@ -4,9 +4,21 @@ const vm = new Vue({
     message: 'Hello world!',
     newTodo: null,
     todos: [
-      { title: 'Clean playlists', priority: true, antiqueness: 23 },
-      { title: 'Search movies', priority: false, antiqueness: 135 },
-      { title: 'Empty trash', priority: true, antiqueness: 378 }
+      {
+        title: 'Clean playlists',
+        priority: true,
+        antiqueness: 23
+      },
+      {
+        title: 'Search movies',
+        priority: false,
+        antiqueness: 135
+      },
+      {
+        title: 'Empty trash',
+        priority: true,
+        antiqueness: 378
+      }
     ]
   },
   methods: {
@@ -22,7 +34,7 @@ const vm = new Vue({
   },
   computed: {
     messageInverted() {
-			return this.message.split('').reverse().join('');
+      return this.message.split('').reverse().join('');
     },
     todosWithPriority() {
       return this.todos.filter(todo => todo.priority);
