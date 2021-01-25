@@ -5,20 +5,30 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>Vue.js - La Instancia Vue</title>
+  <title>Vue.js - Data binding en atributos y clases</title>
   <meta name="description" content="">
+  <style>
+    li {
+      cursor: pointer;
+    }
+
+    .completed {
+      text-decoration: line-through;
+    }
+  </style>
 </head>
 
 <body>
   <main>
-    <h1 v-text="message"></h1>
-    <button @click="backwards">Backwards</button>
+    <h1>To do</h1>
+    <h2>{{ todosCompleted.length }} completadas</h2>
+    <ul>
+      <li v-for="todo in todos" @click="completeTodo(todo)" :class="{ completed: todo.completed }">
+        {{ todo.title }}
+      </li>
+    </ul>
     <pre>{{ $data }}</pre>
   </main>
-  <div id="app">
-    <h1>{{ message }}</h1>
-    <pre>{{ $data }}</pre>
-  </div>
 
   <!-- vue development version, includes helpful console warnings -->
   <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
