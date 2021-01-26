@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Vue.js - Transiciones y animaciones</title>
+  <meta name="description" content="">
+  <link href="https://cdn.jsdelivr.net/npm/animate.css@3.5.1" rel="stylesheet" type="text/css">
+  <style>
+    /* Transition */
+    .reveal-enter {
+      opacity: 0;
+    }
+    .reveal-enter-active {
+      transition: opacity 1s;
+    }
+    .reveal-leave-to {
+      opacity: 0;
+    }
+    .reveal-leave-active {
+      transition: opacity 1s;
+    }
+
+    /* Animation */
+    .bounce-enter-active {
+      animation: bounce-in .5s;
+    }
+    .bounce-leave-active {
+      animation: bounce-in .5s reverse;
+    }
+    @keyframes bounce-in {
+      0% {
+        transform: scale(0);
+      }
+      50% {
+        transform: scale(1.5);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <button @click="show = !show">Show / Hide</button>
+
+    <!-- Transition -->
+    <transition name="reveal" appear>
+      <h1 v-if="show" v-text="messages.transition"></h1>
+    </transition>
+
+    <!-- Animation -->
+    <transition name="bounce">
+      <h1 v-if="show" v-text="messages.animation"></h1>
+    </transition>
+
+    <!-- Custom Animation (with Animate.css) -->
+    <transition name="animate.css" enter-active-class="animated rotateInUpLeft" leave-active-class="animated zoomOutUp">
+      <h1 v-if="show" v-text="messages.animationCustom"></h1>
+    </transition>
+
+    <!-- Transition entre diferentes elementos -->
+    <transition name="reveal" mode="out-in">
+      <h1 v-if="show" v-text="messages.betweenElements" key="show"></h1>
+      <h1 v-else key="hide">No hay mensaje</h1>
+    </transition>
+
+    <pre>{{ $data }}</pre>
+  </main>
+
+  <!-- vue development version, includes helpful console warnings -->
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
