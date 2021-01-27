@@ -11,10 +11,18 @@
 
 <body>
   <main>
-    <mis-tareas :tareas="tareasAjax"></mis-tareas>
+    <h1>Todos locales</h1>
+    <my-todos :todos="todosLocal"></my-todos>
+
+    <h1>Todos Ajax</h1>
+    <my-todos :todos="todosAjax"></my-todos>
 
     <pre>{{ $data }}</pre>
   </main>
+
+  <div id="isolated-component">
+    <my-todos-independent></my-todos-independent>
+  </div>
 
   <!-- vue development version, includes helpful console warnings -->
   <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>

@@ -8,7 +8,7 @@ new Vue({
   },
   methods: {
     loadUsers() {
-      this.$http.get('https://randomuser.me/api/?results=500')
+      this.$http.get('https://randomuser.me/api/?results=50')
         .then(response => {
           this.users = response.body.results;
         });

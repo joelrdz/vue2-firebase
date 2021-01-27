@@ -12,12 +12,12 @@ new Vue({
   methods: {
     loadUsers() {
       // Con vue-resource
-      // this.$http.get('https://randomuser.me/api/?results=500')
+      // this.$http.get('https://randomuser.me/api/?results=50')
       //   .then(response => {
       //     this.users = response.data.results;
       //   });
 
-      axios.get('https://randomuser.me/api/?results=500')
+      axios.get('https://randomuser.me/api/?results=50')
       .then(response => {
         this.users = response.data.results;
       });
