@@ -11,26 +11,28 @@
 
 <body>
   <main>
-    <elegir-ganador :listado="personas"></elegir-ganador>
+    <choose-winner :list="people"></choose-winner>
+
     <pre>{{ $data }}</pre>
   </main>
 
-  <template id="elegir-ganador-template">
+  <!-- Component template -->
+  <template id="choose-winner-template">
     <div>
-      <h1 v-if="ganador">El ganador es: {{ ganador }}</h1>
+      <h1 v-if="winner">El ganador es: {{ winner }}</h1>
       <template v-else>
         <h1>Participantes</h1>
         <ul>
-          <li v-for="persona in listado" v-text="persona"></li>
+          <li v-for="person in list" v-text="person"></li>
         </ul>
       </template>
-      <button @click="elegirGanador">Elegir ganador</button>
+
+      <button @click="chooseWinner">Elegir ganador</button>
     </div>
   </template>
 
   <!-- vue development version, includes helpful console warnings -->
   <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   <script src="js/main.js"></script>
 </body>
 

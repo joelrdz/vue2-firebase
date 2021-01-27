@@ -1,17 +1,17 @@
-Vue.component('elegir-ganador', {
-  props: ['listado'],
-  template: '#elegir-ganador-template',
+Vue.component('choose-winner', {
+  props: ['list'],
+  template: '#choose-winner-template',
   methods: {
-    elegirGanador() {
-      let cantidad = this.participantes.length;
-      let indice = Math.floor((Math.random() * cantidad));
-      this.ganador = this.participantes[indice -1];
+    chooseWinner() {
+      let qty = this.players.length;
+      let index = Math.floor((Math.random() * qty));
+      this.winner = this.players[index -1];
     }
   },
   data() {
     return {
-      ganador: false,
-      participantes: this.listado
+      winner: false,
+      players: this.list
     }
   }
 });
@@ -19,7 +19,7 @@ Vue.component('elegir-ganador', {
 new Vue({
   el: 'main',
   data: {
-    personas: [
+    people: [
       'Tony', 'Elias', 'Tomy', 'Henkka', 'Pasi'
     ]
   },
