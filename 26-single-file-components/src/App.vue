@@ -1,29 +1,20 @@
 <template>
-	<div>
-		<persona></persona>
-		<persona></persona>
-		<persona></persona>
-	</div>
+  <div>
+    <person></person>
+    <person></person>
+    <person></person>
+  </div>
 </template>
 
 <script>
-import persona from './components/Persona'
+import person from './components/Person'
 
 export default {
-	components: { persona },
-	data() {
-		return {}
-	}
+  components: { person },
+  data() {
+    return {}
+  }
 }
 </script>
 
-<style>
-#app {
-	font-family: Avenir, Helvetica, Arial, sans-serif;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-	text-align: center;
-	color: #2c3e50;
-	margin-top: 60px;
-}
-</style>
+<style></style>
