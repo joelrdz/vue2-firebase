@@ -23,7 +23,7 @@
     <h1>To do</h1>
     <h2>{{ todosCompleted.length }} completadas</h2>
     <ul>
-      <li v-for="todo in todos" @click="completeTodo(todo)" :class="{ completed: todo.completed }">
+      <li v-for="todo in todos" @click="updateTodo(todo)" :class="{ completed: todo.completed }">
         {{ todo.title }}
       </li>
     </ul>

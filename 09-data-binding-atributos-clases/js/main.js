@@ -10,7 +10,7 @@ new Vue({
     ]
   },
   methods: {
-    completeTodo(todo) {
+    updateTodo(todo) {
       return todo.completed = !todo.completed;
     }
   },
